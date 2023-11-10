@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pendientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(90deg, #412d69 0%, #692d5b 43%);
+            font-family: 'Abel', sans-serif;
+            padding-top: 60px;
+        }
+        
+        .container {
+            max-width: 550px;
+            margin: auto;
+            background-color: #ffffff;
+            -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.21);
+            box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.21);
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family:sans-serif   
+        }
+        
+        a,
+        p {
+            color: #000;
+        }
+        
+        .barra-superior {
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #412d69 0%, #692d5b 43%);
+        }
+        
+        .barra-superior a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .barra-superior a:hover{
+            color: black;
+        }
+
+        .barra-superior-texto{
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #412d69 0%, #692d5b 43%);
+        }
+
+        
+        .envoltorio-tarea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            border-top: 2px solid rgb(225, 225, 225);
+        }
+        
+        .titulo-tarea {
+            display: flex;
+        }
+        
+        .titulo-tarea a {
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        
+        .icono-tarea-completa {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105, 162, 105);
+            border-radius: 50px;
+        }
+        
+        .icono-tarea-incompleta {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218, 218, 218);
+            border-radius: 50px;
+        }
+        
+        .enlace-eliminar {
+            text-decoration: none;
+            font-weight: 900;
+            color: #ea4220;
+            font-size: 22px;
+            line-height: 0;
+        }
+        
+        #envoltorio-agregar-buscar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #envoltorio-agregar-buscar input{
+            margin-right: 10px;
+        }
+        
+        #enlace-agregar {
+            color: #208f1d;
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px #81413b;
+        }
+        
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid #eb796f;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+        }
+        
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+        
+        .boton {
+            width: 25%;
+            border: 1px solid #412d69;
+            background-color: #fafafa;
+            color: #5b2d69;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .boton:hover{
+            background-color: #ea4220;
+            color: white;
+        
+        }
+
+        .boton_form{
+            width: 25%;
+            border: 1px solid #412d69;
+            background-color: #fafafa;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .boton_form:hover{
+            background-color: #ea4220;
+           
+        }
+
+        .boton_form:hover a{
+            color: white;
+        }
+        
+        .cuerpo-tarjeta {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .cuerpo-tarjeta a{
+            text-decoration: none;
+        }
+
+        input[type="date"] {
+        width: 40%; /* Ancho completo */
+        padding: 5px; /* Relleno interno */
+        border: 1px solid #eb796f; /* Borde */
+        border-radius: 5px; /* Bordes redondeados */
+        text-align: center;
+        }
+
+        .fecha-vencimiento{
+            text-align: center;
+        }
+
+        .envoltorio-items-tarea h3{
+            margin: 10px;
+            padding: 5px;
+        }
+
+       
+
+        
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+</body>
+
+</html>
