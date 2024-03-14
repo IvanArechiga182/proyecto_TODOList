@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
+
+opciones_prioridades = [
+    ('alta', 'Alta'),
+    ('media', 'Media'),
+    ('baja', 'Baja'),
+]
+
 class Tarea(models.Model):
     usuario = models.ForeignKey(User, 
                                 on_delete=models.CASCADE,
@@ -12,6 +19,8 @@ class Tarea(models.Model):
     completo = models.BooleanField(default=False)
     creado = models.DateTimeField(auto_now_add=True)
     fecha_vencimiento = models.DateField(null=True, blank=True)
+    prioridad = models.CharField(max_length=10, choices=opciones_prioridades,default='baja')
+
     
 
     def __str__(self):

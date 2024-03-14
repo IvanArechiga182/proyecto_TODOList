@@ -13,6 +13,9 @@ from django import forms
 
 
 
+
+
+
 class Logueo(LoginView):
     template_name= "base/login.html"
     field= '__all__'
@@ -63,7 +66,7 @@ class DetalleTarea(LoginRequiredMixin,DetailView):
 
 class CrearTarea(LoginRequiredMixin,CreateView):
     model = Tarea
-    fields = ['usuario','titulo','descripcion','fecha_vencimiento']
+    fields = ['usuario','titulo','descripcion','fecha_vencimiento','prioridad']
     success_url = reverse_lazy('tareas')
 
     def get_form(self, form_class=None):
@@ -78,7 +81,7 @@ class CrearTarea(LoginRequiredMixin,CreateView):
 
 class EditarTarea(LoginRequiredMixin,UpdateView):
     model = Tarea
-    fields = ['titulo','descripcion','completo','fecha_vencimiento']
+    fields = ['titulo','descripcion','completo','fecha_vencimiento', 'prioridad']
     success_url = reverse_lazy('tareas')
 
 

@@ -1,0 +1,17 @@
+.prioridad-alta {
+    color: red;
+}
+
+.prioridad-media {
+    color: orange;
+}
+
+.prioridad-baja {
+    color: green;
+}
+
+.headers{
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-around;
+}

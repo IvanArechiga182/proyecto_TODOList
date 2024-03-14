@@ -119,7 +119,7 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = r'A:\Proyectos\proyecto_TODOList\Mis_entornos\Web_cursoPython\src\web_python1\base\static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
