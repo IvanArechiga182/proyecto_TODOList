@@ -66,7 +66,7 @@ class DetalleTarea(LoginRequiredMixin,DetailView):
 
 class CrearTarea(LoginRequiredMixin,CreateView):
     model = Tarea
-    fields = ['usuario','titulo','descripcion','fecha_vencimiento','prioridad']
+    fields = ['usuario','titulo','descripcion','fecha_vencimiento','prioridad', 'materia']
     success_url = reverse_lazy('tareas')
 
     def get_form(self, form_class=None):
@@ -81,7 +81,7 @@ class CrearTarea(LoginRequiredMixin,CreateView):
 
 class EditarTarea(LoginRequiredMixin,UpdateView):
     model = Tarea
-    fields = ['titulo','descripcion','completo','fecha_vencimiento', 'prioridad']
+    fields = ['titulo','descripcion','completo','fecha_vencimiento', 'prioridad', 'materia']
     success_url = reverse_lazy('tareas')
 
 

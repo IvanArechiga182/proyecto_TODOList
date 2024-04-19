@@ -25,6 +25,7 @@
 <p>Titulo</p>  {# Aquí se agrega el título de la lista de tareas #}
 <p>Fecha vencimiento</p>
 <p>Prioridad</p>
+<p>Materia</p>
 </div>
 
 
@@ -45,6 +46,7 @@
         </div>
         <p class="fecha-vencimiento">{{ tarea.fecha_vencimiento|date:"d/m/Y" }}</p>  {# Mostrar la fecha de vencimiento #}
         <p class="prioridad-tarea {% if tarea.prioridad == 'alta' %}prioridad-alta{% elif tarea.prioridad == 'media' %}prioridad-media{% else %}prioridad-baja{% endif %}">{{ tarea.prioridad }}</p> {# Mostrar la prioridad #}
+        <p>{{tarea.materia}}</p>
         <a class="enlace-eliminar" href="{% url 'eliminar-tarea' tarea.id %} ">&#x2718;</a>
         {% endif %}
     </div>

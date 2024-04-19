@@ -20,6 +20,7 @@ class Tarea(models.Model):
     creado = models.DateTimeField(auto_now_add=True)
     fecha_vencimiento = models.DateField(null=True, blank=True)
     prioridad = models.CharField(max_length=10, choices=opciones_prioridades,default='baja')
+    materia = models.CharField(max_length=100, default="")
 
     
 
